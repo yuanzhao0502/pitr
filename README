@@ -1,0 +1,20 @@
+Pitr
+----
+Pocket Identification Tool Recommender (PITR) is a random forest classifier. It recommends a pocket identification tools for different proteins. It contains an example folder and program(pitr.py) and training data.
+
+Prequisites
+----
+Python library: sklearn, matplotlib, pandas and numpy
+ENRI: A tool for selecting structure-based virtual screening targets. We need ENRI to analysis the features of proteins. To get the input file which we need, we need to run pdb2desciptors.py(a program in ENRI) firstly.
+
+pitr.py
+----
+Predicts and writes an output file for pockets detection tools. The output is a list of tools along with the corresponding weights (probability values from the random forest model) for each protein in the prediction. The tools are DEPTH, GHECOM, FPocket, DoGSiteScorer, IsoMif and ProACT2. Higher weight means better performance.
+
+USAGE:
+----
+python pitr.py inputfile outputfile
+
+EXAMPLE:
+----
+python pitr.py /example/desc_merged.txt /examle/1.csv
